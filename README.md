@@ -1,16 +1,169 @@
-# React + Vite
+# Memory Matrix
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive 2-player Memory Card Matching Game built with **React 19**, **Vite**, and **Tailwind CSS v4**. This project was developed as a submission for a Frontend Internship Assignment and includes all required features along with several advanced enhancements such as multiplayer gameplay, multiple difficulty levels, persistent scores, and smooth animations.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live Website:** memory-matrix-game-tau.vercel.app
 
-## React Compiler
+> Replace the above links with your actual Vercel deployment and GitHub repository.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Core Features
+
+* Responsive memory matching game
+* Dynamic card grid based on selected difficulty
+* Fisher-Yates shuffle algorithm for unbiased randomization
+* Two-card flip restriction
+* Automatic match and mismatch handling
+* Turn-based local multiplayer
+* Live score tracking
+* Game timer
+* Winner announcement modal
+* Restart game functionality
+
+### Additional Features
+
+* Three difficulty levels
+
+  * Easy (3×4 – 6 pairs)
+  * Medium (4×4 – 8 pairs)
+  * Hard (6×6 – 18 pairs)
+* Animated splash screen
+* Persistent best scores using Local Storage
+* Responsive design for mobile, tablet, and desktop
+* Modular architecture using reusable components and custom hooks
+
+---
+
+## Tech Stack
+
+* React 19
+* Vite
+* Tailwind CSS v4
+* JavaScript (ES6+)
+* CSS3
+* Local Storage
+* Vercel
+
+---
+
+## Project Structure
+
+```text
+memory-game/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Card.jsx
+│   │   ├── Header.jsx
+│   │   ├── Scoreboard.jsx
+│   │   ├── SplashScreen.jsx
+│   │   └── WinModal.jsx
+│   ├── constants/
+│   │   └── gameConfig.js
+│   ├── hooks/
+│   │   └── useMemoryGame.js
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/memory-game.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd memory-game
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## Gameplay
+
+1. Select a difficulty level.
+2. Players take turns flipping two cards.
+3. Matching cards remain revealed and award a point.
+4. Non-matching cards flip back after a short delay.
+5. The game ends when all pairs are matched.
+6. The player with the highest score wins.
+
+---
+
+## Game Logic
+
+* Fisher-Yates shuffle ensures fair card randomization.
+* Only two cards can be flipped at once.
+* User input is temporarily disabled during mismatch animations.
+* Player turns switch automatically after unsuccessful attempts.
+* Timer starts with the first move.
+* Final scores and winner are displayed when the game ends.
+
+---
+
+## Performance
+
+* Fast rendering with React 19
+* Optimized state management using custom hooks
+* Responsive CSS Grid layout
+* Lightweight production build with Vite
+* Smooth CSS animations
+
+---
+
+## Future Improvements
+
+* Online multiplayer
+* Sound effects
+* Dark mode
+* Leaderboard
+* Achievement system
+* Additional card themes
+
+---
+
+## Author
+
+**Your Name**
+
+GitHub: https://github.com/YOUR_USERNAME
+
+LinkedIn: https://linkedin.com/in/YOUR_LINKEDIN
+
+---
+
+## License
+
+This project was created for educational purposes as part of a Frontend Internship Assignment.
