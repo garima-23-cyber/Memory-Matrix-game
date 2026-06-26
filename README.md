@@ -4,7 +4,7 @@ A responsive 2-player Memory Card Matching Game built with **React 19**, **Vite*
 
 ## Live Demo
 
-**Live Website:** memory-matrix-game-tau.vercel.app
+**Live Website:** https://memory-matrix-game-tau.vercel.app/
 
 > Replace the above links with your actual Vercel deployment and GitHub repository.
 
