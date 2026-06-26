@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
-import Scoreboard from './components/Scoreboard';
-import Card from './components/Card';
-import WinModal from './components/WinModal';
-import SplashScreen from './components/SplashScreen'; // 🔴 IMPORT SPLASH SCREEN
+import Header from './Components/Header';
+import Scoreboard from './Components/Scoreboard';
+import Card from './Components/Card';
+import WinModal from './Components/WinModal';
+import SplashScreen from './Components/SplashScreen'; 
 import { useMemoryGame } from './hooks/useMemoryGame';
 import { DIFFICULTY_SETTINGS } from './constants/gameConfig';
 
 export default function App() {
   const [difficulty, setDifficulty] = useState('medium');
-  const [showSplash, setShowSplash] = useState(true); // 🔴 ADD SPLASH STATE TRACKER
+  const [showSplash, setShowSplash] = useState(true); 
 
   const {
     deck,
